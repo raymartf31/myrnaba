@@ -1,0 +1,68 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  
+  --primary-purple: #1a0033;
+  --secondary-purple: #2d1b4e;
+  --accent-purple: #5b21b6;
+  --gold: #d0c270;
+  --bright-gold: #ffed4e;
+  --dark-bg: #0a0014;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--dark-bg) 0%, var(--primary-purple) 50%, var(--secondary-purple) 100%);
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 10px var(--gold), 0 0 15px var(--gold), 0 0 20px var(--gold);
+  }
+  50% {
+    text-shadow: 0 0 15px var(--bright-gold), 0 0 20px var(--bright-gold), 0 0 25px var(--bright-gold);
+  }
+}

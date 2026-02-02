@@ -1,0 +1,153 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: 
+    radial-gradient(ellipse at top, rgba(123, 49, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+}
+
+.glow-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.glow-circle-1 {
+  width: 400px;
+  height: 400px;
+  background: var(--accent-purple);
+  top: -100px;
+  left: -100px;
+}
+
+.glow-circle-2 {
+  width: 500px;
+  height: 500px;
+  background: var(--gold);
+  bottom: -150px;
+  right: -150px;
+  animation-delay: 1s;
+}
+
+.glow-circle-3 {
+  width: 350px;
+  height: 350px;
+  background: var(--accent-purple);
+  top: 50%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  width: 100%;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(135deg, var(--accent-purple), var(--secondary-purple));
+  border: 2px solid var(--gold);
+  border-radius: 50px;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  animation: float 3s ease-in-out infinite;
+}
+
+.title {
+  margin-bottom: 3rem;
+}
+
+.title-main {
+  display: block;
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--bright-gold), var(--gold), var(--bright-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /*animation: glow 2s ease-in-out infinite; */
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.title-sub {
+  display: block;
+  font-size: clamp(1rem, 1vw, 1.5rem);
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 0.3em;
+  opacity: 0.9;
+  text-transform: uppercase;
+}
+
+.bonus-badge {
+  margin-top: 3rem;
+  padding: 2rem 3rem;
+  background: linear-gradient(135deg, rgba(91, 33, 182, 0.3), rgba(45, 27, 78, 0.5));
+  border: 3px solid var(--gold);
+  border-radius: 20px;
+  box-shadow: 
+    0 0 30px rgba(255, 215, 0, 0.3),
+    inset 0 0 20px rgba(255, 215, 0, 0.1);
+  animation: float 4s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.bonus-stars {
+  color: var(--gold);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.bonus-amount {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: var(--bright-gold);
+  text-shadow: 0 0 20px var(--gold);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.3rem;
+}
+
+.bonus-text {
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 0.3em;
+  opacity: 0.8;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 1rem;
+  }
+
+  .bonus-badge {
+    padding: 1.5rem 2rem;
+  }
+
+  .glow-circle {
+    filter: blur(60px);
+  }
+}
