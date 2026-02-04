@@ -1,18 +1,7 @@
-import { useState, useEffect } from "react";
 import "./App.css";
 import Countdown from "./components/Countdown";
-import Confetti from "./components/Confetti";
 
 function App() {
-  const [showConfetti, setShowConfetti] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowConfetti(false);
-    }, 5000);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <div className="app">
       {/* {showConfetti && <Confetti />} */}
